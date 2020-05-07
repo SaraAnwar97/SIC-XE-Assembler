@@ -1,0 +1,105 @@
+         0                                        
+         0              STARTT      1000          
+		****ERROR: Unrecognized Operation Code
+         0                                        
+         0     first       LDA        #0    010000
+         0                                        
+         0                 STA      flag    0F0000
+         0                                        
+         0                 STA        +T          
+		****Error: Can't be format 4 instruction
+         0                                        
+         0                 LDA        #2    010002
+         0                                        
+         0      loop      COMP     alpha    2B200B
+         0                                        
+         0                 JEQ      exit    332002
+         0                                        
+         0      loop      COMP     alpha    2B200B
+		****ERROR:Duplicate Label 
+         0                                        
+         0                 RMO       A,TACnullnull
+         0                                        
+         0                DIVR       t,p          
+		**** Error: Undefined symbol in Operand
+         2                                        
+         2                MULR       T,S98nullnull
+         2                                        
+         2                 LDT     alpha    772009
+         2                                        
+         2                SUBR       S,T94nullnull
+         2                                        
+         2               ADDLG       one          
+		****ERROR: Unrecognized Operation Code
+         2                                        
+         2                 LDS        #0    6D0000
+         2                                        
+         2               COMPR       S,TA0nullnull
+         2                                        
+         2                 JLT      loop    3B2FFE
+         2                                        
+         2                 JGT      loop    372FFE
+         2                                        
+         2                 LDS        #1    6D0001
+         2                                        
+         2                 STS      flag    7F0001
+         2                                        
+         2      exit       LDT        #0    750000
+         2                                        
+         2                 LDS      flag    6F0000
+         2                                        
+         2               COMPR       S,TA0nullnull
+         2                                        
+         2                 JEQ     prime    332003
+         2                                        
+         2                 LDX        #0    050000
+         2                                        
+         2      notp      LDCH    nltr,x          
+		**** Error: Undefined symbol in Operand
+         5                                        
+         5      outn        TD    outdev    E3200C
+         5                                        
+         5                 JEQ     outnj    33000C
+         5                                        
+         5                  WD    outdev    DF200C
+         5                                        
+         5                 TIX        #3    2D0003
+         5                                        
+         5                RSUB      exit    4F0000
+		****Error: Can't contain an operand
+         5                                        
+         5                 JLT      notp    3B2FFD
+         5                                        
+         5     prime       LDX        #0    050000
+         5                                        
+         5      prim      LDCH    pltr,x          
+		**** Error: Undefined symbol in Operand
+         8                                        
+         8      outp        TD    outdev    E32009
+         8                                        
+         8                 JEQ      outp    332000
+         8                                        
+         8                  WD    outdev    DF2009
+         8                                        
+         8                 TIX        #5    2D0005
+         8                                        
+         8                 JLT      prim    3B2FFD
+         8                                        
+         8     betta      RESW         1          
+         b                                        
+         b     alpha      WORD        18    000012
+         e                                        
+         e     betta     RESSW         1          
+		****ERROR: Unrecognized Operation Code		****ERROR:Duplicate Label 
+         e                                        
+         e       one      WORD         1    000001
+        11                                        
+        11    outdev      BYTE    x'06z'       06Z
+		****ERROR:String must be hexadecimal 
+        11                                        
+        11      pltr      BYTE  c'Prime'5072696D65
+        16                                        
+        16      nltr      BYTE    c'Not'    4E6F74
+        19                                        
+        19                 END   +PrmPrg          
+		****Error: this statement can’t have a label! 
