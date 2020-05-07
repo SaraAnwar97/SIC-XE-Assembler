@@ -59,7 +59,7 @@ a) EQU and ORG statements.
 b) Simple expression evaluation. A simple expression includes simple (A <op> B) operand
 arithmetic, where <op> is one of +, -, *, / and no spaces surround the operation, eg. A+B.
   
-  # Main data structutes
+  # Main data structures
   
   -Array List
   
