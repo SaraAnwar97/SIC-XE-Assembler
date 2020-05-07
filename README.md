@@ -26,6 +26,10 @@ a) 2-byte with 1 or 2 symbolic register reference (e.g., TIXR A, ADDR S,A)
 
 b) RSUB (ignoring any operand or perhaps issuing a warning).
 
+# Note
+
+You must enter Starting address.
+
 c) 3-byte PC-relative with symbolic operand to include immediate, indirect, and indexed
 addressing.
 
