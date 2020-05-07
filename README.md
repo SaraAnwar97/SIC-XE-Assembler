@@ -1,6 +1,6 @@
 # SIC-XE-Assembler
 
-The term project is to implement SIC/XE assembler that produces code for the absolute loader
+The project is to implement SIC/XE assembler that produces code for the absolute loader
 used in the SIC/XE programming assignments.
 
 In phase 1 of the project, it is required to implement Pass1 of the assembler. The output of this
